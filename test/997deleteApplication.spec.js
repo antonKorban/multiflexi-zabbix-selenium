@@ -31,7 +31,7 @@ describe('deleteApplication', function() {
 
     // Now perform delete application actions
     await driver.get("http://localhost/multiflexi/main.php")
-    await driver.manage().window().setRect(1925, 1033)
+    await driver.manage().window().setRect({ width: 1925, height: 1033 })
     await driver.findElement(By.id("imgwidth30srcimagesappssvgApplications")).click()
     await driver.findElement(By.linkText("🧩Application list")).click()
     // Click the last application in the list using a CSS selector
