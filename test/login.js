@@ -1,6 +1,7 @@
 // login.js: reusable login function for Selenium tests
 const fs = require('fs');
 const path = require('path');
+const { By } = require('selenium-webdriver');
 module.exports = async function loginWithAdminCredentials(driver) {
    const tmpDir = process.env.TEMP || process.env.TMP || 'C:\\tmp';
    const credsPath = path.join(tmpDir, 'multiflexi_admin_credentials.json');
